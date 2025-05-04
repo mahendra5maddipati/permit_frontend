@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+// client/src/App.js
+import React from "react";
+import RoleAssigner from "./components/RoleAssigner";
+import WorkspaceActions from "./components/WorkspaceActions";
 
 function App() {
+  const userEmail = "mahendra@example.com"; // hardcoded for now
+  const workspaceId = "workspace_abc123";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="p-6">
+      <h1 className="text-2xl font-bold mb-4">QuickCollab 🔐</h1>
+      <RoleAssigner />
+      <WorkspaceActions userEmail={userEmail} workspaceId={workspaceId} />
     </div>
   );
 }
