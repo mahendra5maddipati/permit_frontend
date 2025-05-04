@@ -1,7 +1,7 @@
 // client/src/api/permit.js
 import axios from "axios";
 
-const API_BASE = "http://localhost:5000/api"; // replace with deployed backend later
+const API_BASE = "https://permit-backend.onrender.com"; // replace with deployed backend later
 
 export const assignRole = async (userEmail, role, workspaceId) => {
   return axios.post(`${API_BASE}/assign-role`, {
